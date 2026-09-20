@@ -4,6 +4,7 @@
 #include <algorithm>
 #include "configuration.hpp"
 #include "helpers.hpp"
+#include "constants.hpp"
 
 namespace accordion_bot {
 
