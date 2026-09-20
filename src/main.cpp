@@ -24,7 +24,7 @@ struct Button {
     int row;
     ButtonType type;
     std::string toString() const {
-        return ::accordion_bot::toString(type) + " Button(" + std::to_string(frequency) + "Hz [" + std::to_string(row) + "," + std::to_string(column) + "]";
+        return ::accordion_bot::toString(type) + " Button(" + std::to_string(frequency) + "Hz [" + std::to_string(row) + "," + std::to_string(column) + "])";
     }
 };
 
@@ -32,8 +32,8 @@ struct NoteButton {
     Button button;
     double frequency_difference;
 };
-std::string toString(NoteButton button) {
-    return button.button.toString() + " (Δ" + std::to_string(button.frequency_difference) + "Hz)";
+std::string toString(NoteButton button, bool show_delta = false) {
+    return button.button.toString() + (show_delta ? " (Δ" + std::to_string(button.frequency_difference) + "Hz)" : "");
 }
 
 struct Note {
