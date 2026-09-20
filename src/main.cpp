@@ -7,8 +7,6 @@
 
 namespace accordion_bot {
 
-const int MaxOctaves = 7;
-
 enum class ButtonType {
     Push,
     Pull
